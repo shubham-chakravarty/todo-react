@@ -1,6 +1,6 @@
 import { Button, Card, CardActions, CardContent, Typography } from "@mui/material";
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, clickFunction }) => {
     return (
         <Card sx={{
             maxWidth: 350,
@@ -14,7 +14,8 @@ const TodoItem = ({ todo }) => {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button sx={{
+                <Button onClick={() => clickFunction(todo)}
+                sx={{
                     backgroundColor: "black",
                     color: "white",
                     opacity: '0.9',
